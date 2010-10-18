@@ -2,11 +2,8 @@
 
 ;tests
 (assert-equals (greater 3 4) 4)
-
 (assert-equals (lesser 3 4) 3)
-
 (assert-equals (sos_of_greater_pair 1 3 4) 25)
-
 (assert-equals (sos_of_greater_pair -1 -3 -4) 10)
 
 (define (sum_of_squares x y) (+ (* x x) (* y y)))
