@@ -9,3 +9,4 @@
 (assert-equals (pascal 3 2) 2)
 (assert-equals (pascal 5 2) 4)
 (assert-equals (pascal 5 3) 6)
+
