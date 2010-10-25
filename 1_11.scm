@@ -2,14 +2,15 @@
 
 ;recursive
 (define (f n)(
-	      cond ((< n 3) n)
+	      cond ((<= n 3) n)
 		   (else (+ (f (- n 1)) (* 2 (f (- n 2))) (* 3 (f (- n 3))))))) 
 
-(assert-equals (f 2) 2)
-(assert-equals (f 4) 10)
-(assert-equals (f 5) 22)
-(assert-equals (f 6) 51)
-(assert-equals (f 10) 1892)
+		
+(assert-equals 2 (f 2))
+(assert-equals 10 (f 4))
+(assert-equals 22 (f 5))
+(assert-equals 51 (f 6))
+(assert-equals 1657 (f 10))
 
 ;iterative 
 ;remember the last 2 f's and create the latest one. build till n
@@ -22,9 +23,9 @@
   (cond ((< n 3) n)
 		(else (f-iter n 3 3 2 1))))
 		
-(assert-equals (fi 2) 2)
-(assert-equals (fi 4) 10)
-(assert-equals (fi 5) 22)
-(assert-equals (fi 6) 51)
-(assert-equals (fi 10) 1892)
+(assert-equals 2 (fi 2))
+(assert-equals 10 (fi 4))
+(assert-equals 22 (fi 5))
+(assert-equals 51 (fi 6))
+(assert-equals 1657 (fi 10))
 		
