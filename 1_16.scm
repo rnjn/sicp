@@ -1,7 +1,6 @@
 (load "common.scm")
 
 ;recursive
-
 (define (square a)
   (* a a))
 
