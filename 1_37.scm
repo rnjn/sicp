@@ -20,7 +20,6 @@
 (assert-equals 11 (min-k))
 
 
-
 ;count down for iterative
 (define (i-cont-frac n d k)
   (define (accumulate i state)
