@@ -17,4 +17,19 @@
 	     (iterate (+ k 1))))))
     (iterate 2))
 
-(min-k)
+(assert-equals 12 (min-k))
+
+
+
+;count down for iterative - this is easier but lame
+(define (i-cont-frac n d k)
+  (define (accumulate i state)
+    (cond ((= i k) state)
+	  (else
+	   (accumulate (+ i 1) (/ (n (- k i)) (+ state (d (- k i))))))))
+  (accumulate 1 0))
+
+(assert-equals (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12)
+ (i-cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12))
+
+	       
