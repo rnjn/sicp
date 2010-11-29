@@ -21,7 +21,7 @@
 
 
 
-;count down for iterative - this is easier but lame
+;count down for iterative
 (define (i-cont-frac n d k)
   (define (accumulate i state)
     (cond ((= i k) state)
