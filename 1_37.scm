@@ -2,7 +2,7 @@
 
 (define (cont-frac n d k)
   (define (next-term i)
-    (cond ((= i k) 0) 
+    (cond ((> i k) 0) 
 	  (else
 	   (/ (n i) ( + (d i) (next-term (+ i 1)))))))
   (next-term 1))
@@ -17,7 +17,7 @@
 	     (iterate (+ k 1))))))
     (iterate 2))
 
-(assert-equals 12 (min-k))
+(assert-equals 11 (min-k))
 
 
 
@@ -27,9 +27,9 @@
     (cond ((= i k) state)
 	  (else
 	   (accumulate (+ i 1) (/ (n (- k i)) (+ state (d (- k i))))))))
-  (accumulate 1 0))
+  (accumulate 0 0))
 
-(assert-equals (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12)
- (i-cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 12))
+(assert-equals (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 11)
+ (i-cont-frac (lambda (i) 1.0) (lambda (i) 1.0) 11))
 
 	       
