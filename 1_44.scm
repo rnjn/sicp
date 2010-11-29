@@ -9,7 +9,17 @@
 	  (else
 	     (compose (repeated f (- n 1)) f))))
 
-(define (inc i) (+ i 1))
-(assert-equals 6 ((repeated inc 5) 1))
-(define (square n) (* n n))
 (assert-equals 625 ((repeated square 2) 5))
+
+(define (smooth f)
+  (define dx 0.00001)
+  (lambda (x)
+    (/ (+ (f (+ x dx)) (f x) (f (- x dx))) 3)))
+
+(define (n-fold-smooth n)
+  (lambda (f)
+    ((repeated smooth n) f)))
+
+(((n-fold-smooth 10) (lambda (x) (* x x))) 10)
+
+
