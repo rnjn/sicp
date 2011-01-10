@@ -5,11 +5,6 @@
       a
       (gcd b (remainder a b))))
 
-(define (mod a)
-  (if (> a 0)
-      a
-      (- 0 a)))
-
 (define numer (lambda (rat)
 		(car rat)))
 
@@ -23,11 +18,10 @@
 		    (display (denom rat))))
 
 (define (make-rat n d)
-		  (let ((g (mod (gcd n d))))
-		    (cond ((> (* n d) 0) 
-			   (cons (/ n g) (/ d g)))
-			  (else
-			   (cons (/ (- (mod n)) g) (/ (mod d) g))))))
-		  
+  (define (sign)
+    (cond ((> (* n d) 0) +) (else -)))
+  (let ((g (abs (gcd n d))))
+    (cons (/ ((sign) 0 (abs n)) g) (/ (abs d) g))))
+
 
 		  
