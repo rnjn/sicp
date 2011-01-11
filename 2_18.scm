@@ -1,6 +1,5 @@
 (load "common.scm")
 
-
 (define (reverse l)
   (define (reverse-iter l1 l2)
     (cond ((null? l1) l2)
