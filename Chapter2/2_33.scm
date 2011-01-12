@@ -16,8 +16,7 @@
 
 (define (length sequence)
   (accumulate (lambda (x y)
-		(if (null? x) 
-		(+ 1 (length (cdr sequence))))
+		(+ 1 y))
 	      0 sequence))
 
 ;tests
