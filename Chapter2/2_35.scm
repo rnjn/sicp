@@ -5,8 +5,6 @@
       (f (car sequence) 
 	 (accumulate f initial (cdr sequence)))))
 
-
-
 (define (count-leaves tree)
   (accumulate (lambda (current next)
 		(+ (if (not (pair? current)) 1
