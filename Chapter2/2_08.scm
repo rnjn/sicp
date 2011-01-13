@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (lower-bound x)
   (car x))

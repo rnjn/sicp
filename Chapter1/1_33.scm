@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (filtered-accumulate combiner filter null-value n1 n2 f next)
   (cond ((> n1 n2) null-value)

@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (accumulate f initial sequence)
   (if (null? sequence) initial

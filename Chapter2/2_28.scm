@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (fringe l)
   (define (iterate source result)

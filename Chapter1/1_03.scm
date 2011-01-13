@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 
 (define (sum_of_squares x y) (+ (* x x) (* y y)))

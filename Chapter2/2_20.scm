@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (same-parity a . l)
   (define (even? n)

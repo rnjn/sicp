@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (reverse l)
   (define (iterate items reversed-list)

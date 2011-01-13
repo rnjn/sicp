@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (exp a n)
   (define (i-exp i prod)

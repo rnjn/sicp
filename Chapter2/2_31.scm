@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (map f l)
   (if (null? l) nil

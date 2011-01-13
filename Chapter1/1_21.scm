@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 ;i = test divisor, which is initially 2
 (define (find-divisor n i)

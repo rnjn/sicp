@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (for-each f l)
   (if (not (null? l))	

@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 ; multiply by adding
 (define (* a b)

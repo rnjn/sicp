@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (product n1 n2 f next)
   (cond ((> n1 n2) 1)

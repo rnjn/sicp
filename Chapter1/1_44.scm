@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (compose f g)
   (lambda (i)

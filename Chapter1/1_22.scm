@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (find-divisor n i)
   (cond ((> (square i) n) n)

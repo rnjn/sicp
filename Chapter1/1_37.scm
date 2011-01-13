@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (cont-frac n d k)
   (define (next-term i)

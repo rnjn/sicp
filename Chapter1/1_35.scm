@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (fixed-point f first-guess)
   (define tolerance 0.0001)

@@ -1,4 +1,4 @@
-(load "common.scm")
+(load "../common.scm")
 
 (define (next i)
   (cond ((= i 2) 3)
