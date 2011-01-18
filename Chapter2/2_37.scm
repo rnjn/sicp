@@ -20,6 +20,11 @@
 (define (transpose m)
   (accumulate-n cons '() m))
 
+(define (matrix-*-matrix m n)
+  (let ((cols (transpose n)))
+    (map (lambda (x) 
+	   (matrix-*-vector n x)) m)))
+
 ;tests
 (define m '((1 2 3 4) (4 5 6 6) (6 7 8 9)))
 (define v '(1 2 3 4))
@@ -27,5 +32,6 @@
 (define x '(1 2 3))
 (assert-equals 80 (dot-product v w))
 (assert-equals '(30 56 80) (matrix-*-vector m v))
-
+(assert-equals '((1 4 6) (2 5 7) (3 6 8) (4 6 9)) (transpose m))
+(assert-equals '((30 56 80) (56 113 161) (80 161 230)) (matrix-*-matrix m m))
 
